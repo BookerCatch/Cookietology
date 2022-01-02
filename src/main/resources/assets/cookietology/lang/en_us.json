@@ -1,0 +1,17 @@
+{
+  "itemGroup.cookietology": "Cookietology",
+
+  "item.cookietology.soft_butter": "Soft Butter",
+  "item.cookietology.butterator": "Butterator",
+
+  "block.cookietology.butterator": "Butterator",
+  "block.cookietology.butterator_fan": "Butterator Fan",
+  "block.cookietology.broken_butterator_fan": "Broken Butterator Fan",
+
+  "container.butterator": "Butterator",
+
+  "subtitles.cookietology.butterator_fan.repair": "Fan Repaired",
+
+  "machineInfo.missing_fan": "Missing Fan!",
+  "machineInfo.cooldown": "Cooling Down"
+}

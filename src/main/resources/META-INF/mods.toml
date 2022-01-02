@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[39,)"
+license="All rights reserved"
+[[mods]]
+modId="cookietology"
+version="${file.jarVersion}"
+displayName="Cookietology"
+logoFile="examplemod.png"
+authors="EterDelta"
+description='''
+'''
+
+[[dependencies.cookietology]]
+    modId="forge"
+    mandatory=true
+    versionRange="[39,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.cookietology]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.1,1.19)"
+    ordering="NONE"
+    side="BOTH"

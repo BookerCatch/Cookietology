@@ -1,0 +1,17 @@
+{
+  "itemGroup.cookietology": "Cookietology",
+
+  "item.cookietology.soft_butter": "Mantequilla Suave",
+  "item.cookietology.butterator": "Mantecador",
+
+  "block.cookietology.butterator": "Mantecador",
+  "block.cookietology.butterator_fan": "Ventilador de Mantecador",
+  "block.cookietology.broken_butterator_fan": "Ventilador de Mantecador Roto",
+
+  "container.butterator": "Mantecador",
+
+  "subtitles.cookietology.butterator_fan.repair": "Ventilador Reparado",
+
+  "machineInfo.missing_fan": "¡Falta Ventilador!",
+  "machineInfo.cooldown": "Enfriándose"
+}

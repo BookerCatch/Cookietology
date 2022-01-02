@@ -1,0 +1,8 @@
+{
+  "block.butterator_fan.repair": {
+    "sounds": [
+      "cookietology:block/butterator_fan/repair"
+    ],
+    "subtitle": "subtitles.cookietology.butterator_fan.repair"
+  }
+}
