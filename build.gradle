@@ -10,6 +10,7 @@ buildscript {
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
@@ -30,6 +31,7 @@ minecraft {
 
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            arg "-mixin.config=cookietology.mixins.json"
 
             mods {
                 cookietology {
@@ -43,6 +45,7 @@ minecraft {
 
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            arg "-mixin.config=cookietology.mixins.json"
 
             mods {
                 cookietology {
@@ -67,6 +70,10 @@ minecraft {
     }
 }
 
+mixin {
+    add sourceSets.main, "cookietology.refmap.json"
+}
+
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
@@ -77,6 +84,8 @@ dependencies {
 
     minecraft 'net.minecraftforge:forge:1.18.1-39.0.5'
     implementation fg.deobf('software.bernie.geckolib:geckolib-1.18-forge:3.0.3')
+
+    annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
 }
 
 jar {
