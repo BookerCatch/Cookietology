@@ -112,7 +112,7 @@ public class ButteratorBlockEntity extends BaseContainerBlockEntity implements W
                         } else if (resultStack.is(butterResultStack.getItem())) {
                             resultStack.grow(Math.min(butterResultStack.getCount(), resultStack.getMaxStackSize() - resultStack.getCount()));
                         }
-                        if (level.random.nextInt(100) <= 10) {
+                        if (level.random.nextInt(100) <= 20) {
                             butterator.breakFan();
                         }
                         level.playSound(null, blockPos, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 0.6F, 0.8F);
