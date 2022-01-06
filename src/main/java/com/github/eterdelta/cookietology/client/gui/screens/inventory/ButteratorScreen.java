@@ -9,7 +9,6 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -17,8 +16,8 @@ import net.minecraft.world.entity.player.Inventory;
 
 public class ButteratorScreen extends AbstractContainerScreen<ButteratorMenu> {
     private static final ResourceLocation TEXTURE = new ResourceLocation(Cookietology.MODID, "textures/gui/container/butterator.png");
-    private static final Component MISSING_FAN_COMPONENT = new TranslatableComponent("machineInfo.missing_fan");
-    private static final Component COOLDOWN_COMPONENT = new TranslatableComponent("machineInfo.cooldown");
+    private static final Component MISSING_FAN_COMPONENT = new TranslatableComponent("machineInfo.missing_fan").withStyle(ChatFormatting.RED);
+    private static final Component COOLDOWN_COMPONENT = new TranslatableComponent("machineInfo.cooldown").withStyle(ChatFormatting.YELLOW);
     private static final Component EMPTY_COMPONENT = new TextComponent("--:--:--");
 
     public ButteratorScreen(ButteratorMenu menu, Inventory inventory, Component title) {
@@ -66,10 +65,10 @@ public class ButteratorScreen extends AbstractContainerScreen<ButteratorMenu> {
                     this.drawScreenInfo(poseStack, EMPTY_COMPONENT);
                 }
             } else {
-                this.drawScreenInfo(poseStack, ((MutableComponent) MISSING_FAN_COMPONENT).withStyle(ChatFormatting.RED));
+                this.drawScreenInfo(poseStack, MISSING_FAN_COMPONENT);
             }
         } else {
-            this.drawScreenInfo(poseStack, ((MutableComponent) COOLDOWN_COMPONENT).withStyle(ChatFormatting.YELLOW));
+            this.drawScreenInfo(poseStack, COOLDOWN_COMPONENT);
         }
     }
 
