@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_16",
   "refmap": "cookietology.refmap.json",
   "mixins": [
+    "FoodDataMixin"
   ],
   "injectors": {
     "defaultRequire": 1

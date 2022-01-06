@@ -1,6 +1,8 @@
 package com.github.eterdelta.cookietology.registry;
 
 import com.github.eterdelta.cookietology.Cookietology;
+import com.github.eterdelta.cookietology.item.cookie.CookieItem;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
@@ -12,6 +14,7 @@ public class CookietologyItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Cookietology.MODID);
 
     public static final RegistryObject<Item> SOFT_BUTTER = ITEMS.register("soft_butter", () -> new Item(new Item.Properties().tab(Cookietology.CREATIVE_TAB)));
+    public static final RegistryObject<Item> COOKIE = ITEMS.register("cookie", () -> new CookieItem((new Item.Properties()).tab(Cookietology.CREATIVE_TAB).food(Foods.COOKIE)));
 
     public static final RegistryObject<Item> BUTTERATOR = ITEMS.register("butterator", () -> new BlockItem(CookietologyBlocks.BUTTERATOR.get(), new Item.Properties().tab(Cookietology.CREATIVE_TAB)));
     public static final RegistryObject<Item> BUTTERATOR_FAN = ITEMS.register("butterator_fan", () -> new BlockItem(CookietologyBlocks.BUTTERATOR_FAN.get(), new Item.Properties().tab(Cookietology.CREATIVE_TAB)));

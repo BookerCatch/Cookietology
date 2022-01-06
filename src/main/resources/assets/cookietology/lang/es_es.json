@@ -2,7 +2,13 @@
   "itemGroup.cookietology": "Cookietology",
 
   "item.cookietology.soft_butter": "Mantequilla Suave",
+  "item.cookietology.cookie": "Galleta",
   "item.cookietology.butterator": "Mantecador",
+
+  "cookie.saturation": "Saturación: %s",
+  "cookie.nutrition": "Nutrición: %s",
+  "cookie.eat_speed": "Velocidad de Consumo: %s Ticks",
+  "cookie.effects": "Efectos:",
 
   "block.cookietology.butterator": "Mantecador",
   "block.cookietology.butterator_fan": "Ventilador de Mantecador",

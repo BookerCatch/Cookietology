@@ -2,7 +2,13 @@
   "itemGroup.cookietology": "Cookietology",
 
   "item.cookietology.soft_butter": "Soft Butter",
+  "item.cookietology.cookie": "Cookie",
   "item.cookietology.butterator": "Butterator",
+
+  "cookie.saturation": "Saturation: %s",
+  "cookie.nutrition": "Nutrition: %s",
+  "cookie.eat_speed": "Eat Speed: %s Ticks",
+  "cookie.effects": "Effects:",
 
   "block.cookietology.butterator": "Butterator",
   "block.cookietology.butterator_fan": "Butterator Fan",
