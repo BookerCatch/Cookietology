@@ -1,7 +1,7 @@
 package com.github.eterdelta.cookietology.registry;
 
 import com.github.eterdelta.cookietology.Cookietology;
-import com.github.eterdelta.cookietology.item.cookie.CookieItem;
+import com.github.eterdelta.cookietology.item.CookieItem;
 import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

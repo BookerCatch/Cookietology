@@ -1,6 +1,6 @@
 package com.github.eterdelta.cookietology.util;
 
-import com.github.eterdelta.cookietology.item.cookie.CookieItem;
+import com.github.eterdelta.cookietology.item.CookieItem;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
 

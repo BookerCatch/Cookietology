@@ -1,4 +1,4 @@
-package com.github.eterdelta.cookietology.item.cookie;
+package com.github.eterdelta.cookietology.item;
 
 import com.github.eterdelta.cookietology.registry.CookietologyItems;
 import com.github.eterdelta.cookietology.util.CookieHelper;

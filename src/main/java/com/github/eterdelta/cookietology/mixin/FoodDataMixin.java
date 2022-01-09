@@ -1,6 +1,6 @@
 package com.github.eterdelta.cookietology.mixin;
 
-import com.github.eterdelta.cookietology.item.cookie.CookieItem;
+import com.github.eterdelta.cookietology.item.CookieItem;
 import com.github.eterdelta.cookietology.registry.CookietologyItems;
 import com.github.eterdelta.cookietology.util.CookieHelper;
 import net.minecraft.world.food.FoodData;
