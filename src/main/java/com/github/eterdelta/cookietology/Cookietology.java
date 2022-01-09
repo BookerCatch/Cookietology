@@ -1,10 +1,12 @@
 package com.github.eterdelta.cookietology;
 
 import com.github.eterdelta.cookietology.client.gui.screens.inventory.ButteratorScreen;
+import com.github.eterdelta.cookietology.client.renderer.blockentity.MixingBowlRenderer;
 import com.github.eterdelta.cookietology.item.CookietologyCreativeTab;
 import com.github.eterdelta.cookietology.registry.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -27,6 +29,7 @@ public class Cookietology {
         CookietologyBlocks.BLOCKS.register(eventBus);
         CookietologyItems.ITEMS.register(eventBus);
         CookietologyMenus.MENUS.register(eventBus);
+        CookietologyRecipes.RECIPE_SERIALIZERS.register(eventBus);
         CookietologySounds.SOUNDS.register(eventBus);
 
         eventBus.addListener(this::onCommonSetup);
@@ -39,6 +42,7 @@ public class Cookietology {
     private void onClientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
             MenuScreens.register(CookietologyMenus.BUTTERATOR.get(), ButteratorScreen::new);
+            BlockEntityRenderers.register(CookietologyBlockEntities.MIXING_BOWL.get(), MixingBowlRenderer::new);
             Minecraft.getInstance().getItemColors().register((itemStack, colorIndex) -> {
                 if (colorIndex <= 0) {
                     List<MobEffectInstance> cookieEffects = PotionUtils.getCustomEffects(itemStack);

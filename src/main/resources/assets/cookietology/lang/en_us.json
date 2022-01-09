@@ -3,6 +3,8 @@
 
   "item.cookietology.soft_butter": "Soft Butter",
   "item.cookietology.cookie": "Cookie",
+  "item.cookietology.flour": "Flour",
+  "item.cookietology.soft_dough": "Soft Dough",
   "item.cookietology.butterator": "Butterator",
 
   "cookie.saturation": "Saturation: %s",
@@ -13,6 +15,7 @@
   "block.cookietology.butterator": "Butterator",
   "block.cookietology.butterator_fan": "Butterator Fan",
   "block.cookietology.broken_butterator_fan": "Broken Butterator Fan",
+  "block.cookietology.mixing_bowl": "Mixing Bowl",
 
   "container.butterator": "Butterator",
 

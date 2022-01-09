@@ -3,6 +3,8 @@
 
   "item.cookietology.soft_butter": "Mantequilla Suave",
   "item.cookietology.cookie": "Galleta",
+  "item.cookietology.flour": "Harina",
+  "item.cookietology.soft_dough": "Masa Suave",
   "item.cookietology.butterator": "Mantecador",
 
   "cookie.saturation": "Saturación: %s",
@@ -13,6 +15,7 @@
   "block.cookietology.butterator": "Mantecador",
   "block.cookietology.butterator_fan": "Ventilador de Mantecador",
   "block.cookietology.broken_butterator_fan": "Ventilador de Mantecador Roto",
+  "block.cookietology.mixing_bowl": "Tazón de Mezcla",
 
   "container.butterator": "Mantecador",
 
