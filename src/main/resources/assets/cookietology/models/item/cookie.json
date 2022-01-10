@@ -1,8 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "cookietology:item/cookie_0",
-    "layer1": "cookietology:item/cookie_1",
-    "particle": "minecraft:item/cookie"
+    "layer0": "minecraft:item/cookie"
   }
 }

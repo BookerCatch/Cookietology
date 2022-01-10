@@ -4,11 +4,8 @@ import com.github.eterdelta.cookietology.client.gui.screens.inventory.Butterator
 import com.github.eterdelta.cookietology.client.renderer.blockentity.MixingBowlRenderer;
 import com.github.eterdelta.cookietology.item.CookietologyCreativeTab;
 import com.github.eterdelta.cookietology.registry.*;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -43,18 +40,6 @@ public class Cookietology {
         event.enqueueWork(() -> {
             MenuScreens.register(CookietologyMenus.BUTTERATOR.get(), ButteratorScreen::new);
             BlockEntityRenderers.register(CookietologyBlockEntities.MIXING_BOWL.get(), MixingBowlRenderer::new);
-            Minecraft.getInstance().getItemColors().register((itemStack, colorIndex) -> {
-                if (colorIndex <= 0) {
-                    List<MobEffectInstance> cookieEffects = PotionUtils.getCustomEffects(itemStack);
-                    if (!cookieEffects.isEmpty()) {
-                        return PotionUtils.getColor(PotionUtils.getCustomEffects(itemStack));
-                    } else {
-                        return 0xFFA070;
-                    }
-                } else {
-                    return -1;
-                }
-            }, CookietologyItems.COOKIE.get());
         });
     }
 }
