@@ -18,7 +18,7 @@ import net.minecraftforge.registries.ForgeRegistryEntry;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MixingRecipe implements Recipe<Container> {
+public class MixingRecipe implements IMixingRecipe {
     protected final NonNullList<Ingredient> ingredients;
     protected final ResourceLocation id;
     protected final ItemStack result;
@@ -70,10 +70,6 @@ public class MixingRecipe implements Recipe<Container> {
     }
 
     @Override
-    public RecipeType<?> getType() {
-        return CookietologyRecipes.MIXING;
-    }
-
     public int getAttempts() {
         return this.attempts;
     }

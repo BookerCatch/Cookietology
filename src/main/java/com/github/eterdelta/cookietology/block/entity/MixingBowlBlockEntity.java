@@ -1,5 +1,6 @@
 package com.github.eterdelta.cookietology.block.entity;
 
+import com.github.eterdelta.cookietology.item.crafting.IMixingRecipe;
 import com.github.eterdelta.cookietology.item.crafting.MixingRecipe;
 import com.github.eterdelta.cookietology.registry.CookietologyBlockEntities;
 import com.github.eterdelta.cookietology.registry.CookietologyRecipes;
@@ -81,7 +82,7 @@ public class MixingBowlBlockEntity extends BlockEntity implements Clearable {
 
     public InteractionResult mixAttempt(Level level, Player player, InteractionHand interactionHand) {
         if (!this.itemStacks.stream().allMatch(ItemStack::isEmpty)) {
-            Optional<MixingRecipe> recipe = this.getRecipe();
+            Optional<IMixingRecipe> recipe = this.getRecipe();
 
             if (recipe.isPresent()) {
                 if (!level.isClientSide()) {
@@ -105,7 +106,7 @@ public class MixingBowlBlockEntity extends BlockEntity implements Clearable {
         return InteractionResult.CONSUME;
     }
 
-    public Optional<MixingRecipe> getRecipe() {
+    public Optional<IMixingRecipe> getRecipe() {
         return this.level.getRecipeManager().getRecipeFor(CookietologyRecipes.MIXING, new SimpleContainer(this.itemStacks.toArray(ItemStack[]::new)), this.level);
     }
 

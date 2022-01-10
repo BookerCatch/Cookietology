@@ -5,11 +5,15 @@
   "item.cookietology.cookie": "Cookie",
   "item.cookietology.flour": "Flour",
   "item.cookietology.soft_dough": "Soft Dough",
+  "item.cookietology.cookie_shaped_dough": "Cookie Shaped Dough",
+  "item.cookietology.cookie_mold": "Cookie Mold",
 
   "cookie.saturation": "Saturation: %s",
   "cookie.nutrition": "Nutrition: %s",
   "cookie.eat_speed": "Eat Speed: %s Ticks",
   "cookie.effects": "Effects:",
+  "dough.thickness": "Thickness: %s",
+  "dough.brilliance": "Brilliance: %s",
 
   "block.cookietology.butterator": "Butterator",
   "block.cookietology.butterator_fan": "Butterator Fan",

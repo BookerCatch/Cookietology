@@ -5,11 +5,15 @@
   "item.cookietology.cookie": "Galleta",
   "item.cookietology.flour": "Harina",
   "item.cookietology.soft_dough": "Masa Suave",
+  "item.cookietology.cookie_shaped_dough": "Masa con Forma de Galleta",
+  "item.cookietology.cookie_mold": "Molde de Galleta",
 
   "cookie.saturation": "Saturación: %s",
   "cookie.nutrition": "Nutrición: %s",
   "cookie.eat_speed": "Velocidad de Consumo: %s Ticks",
   "cookie.effects": "Efectos:",
+  "dough.thickness": "Grosor: %s",
+  "dough.brilliance": "Brillo: %s",
 
   "block.cookietology.butterator": "Mantecador",
   "block.cookietology.butterator_fan": "Ventilador de Mantecador",
