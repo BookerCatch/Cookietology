@@ -1,7 +1,9 @@
 package com.github.eterdelta.cookietology.registry;
 
 import com.github.eterdelta.cookietology.Cookietology;
-import com.github.eterdelta.cookietology.item.crafting.*;
+import com.github.eterdelta.cookietology.item.crafting.IBakingRecipe;
+import com.github.eterdelta.cookietology.item.crafting.IMixingRecipe;
+import com.github.eterdelta.cookietology.item.crafting.MixingRecipe;
 import com.github.eterdelta.cookietology.item.crafting.special.CookieBakingRecipe;
 import com.github.eterdelta.cookietology.item.crafting.special.DoughBrillianceRecipe;
 import com.github.eterdelta.cookietology.item.crafting.special.DoughCompressingRecipe;

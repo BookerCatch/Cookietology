@@ -1,7 +1,6 @@
 package com.github.eterdelta.cookietology.block.entity;
 
 import com.github.eterdelta.cookietology.item.crafting.IMixingRecipe;
-import com.github.eterdelta.cookietology.item.crafting.MixingRecipe;
 import com.github.eterdelta.cookietology.registry.CookietologyBlockEntities;
 import com.github.eterdelta.cookietology.registry.CookietologyRecipes;
 import net.minecraft.core.BlockPos;

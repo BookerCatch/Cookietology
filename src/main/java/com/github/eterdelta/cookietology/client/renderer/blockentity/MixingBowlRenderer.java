@@ -20,7 +20,7 @@ public class MixingBowlRenderer implements BlockEntityRenderer<MixingBowlBlockEn
     public void render(MixingBowlBlockEntity mixingBowl, float p_112308_, PoseStack poseStack, MultiBufferSource multiBufferSource, int p_112311_, int p_112312_) {
         NonNullList<ItemStack> itemStacks = mixingBowl.getItemStacks();
 
-        for(int i = 0; i < itemStacks.size(); ++i) {
+        for (int i = 0; i < itemStacks.size(); ++i) {
             ItemStack itemstack = itemStacks.get(i);
             if (!itemstack.isEmpty()) {
                 poseStack.pushPose();
