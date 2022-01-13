@@ -21,6 +21,7 @@ public class CookietologyItems {
     public static final RegistryObject<Item> SOFT_DOUGH = ITEMS.register("soft_dough", () -> new DoughItem((new Item.Properties()).tab(Cookietology.CREATIVE_TAB)));
     public static final RegistryObject<Item> COOKIE_SHAPED_DOUGH = ITEMS.register("cookie_shaped_dough", () -> new DoughItem((new Item.Properties()).tab(Cookietology.CREATIVE_TAB)));
     public static final RegistryObject<Item> COOKIE_MOLD = ITEMS.register("cookie_mold", () -> new MoldItem((new Item.Properties()).tab(Cookietology.CREATIVE_TAB), COOKIE_SHAPED_DOUGH.get()));
+    public static final RegistryObject<Item> SIMPLE_DISPLAY = ITEMS.register("simple_display", () -> new Item((new Item.Properties()).tab(Cookietology.CREATIVE_TAB)));
 
     public static final RegistryObject<Item> BUTTERATOR = ITEMS.register("butterator", () -> new BlockItem(CookietologyBlocks.BUTTERATOR.get(), new Item.Properties().tab(Cookietology.CREATIVE_TAB)));
     public static final RegistryObject<Item> BAKER = ITEMS.register("baker", () -> new BlockItem(CookietologyBlocks.BAKER.get(), new Item.Properties().tab(Cookietology.CREATIVE_TAB)));
