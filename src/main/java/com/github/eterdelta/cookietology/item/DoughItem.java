@@ -12,7 +12,7 @@ import net.minecraft.world.level.Level;
 import java.util.List;
 
 public class DoughItem extends Item {
-    public static final DoughProperties DEFAULT_PROPERTIES = new DoughProperties(10, 0);
+    public static final DoughProperties DEFAULT_PROPERTIES = new DoughProperties(5, 1);
 
     public DoughItem(Properties properties) {
         super(properties);

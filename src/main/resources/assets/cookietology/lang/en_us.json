@@ -10,7 +10,8 @@
 
   "cookie.saturation": "Saturation: %s",
   "cookie.nutrition": "Nutrition: %s",
-  "cookie.eat_speed": "Eat Speed: %s Ticks",
+  "cookie.eat_speed": "Eat Speed: %s",
+  "cookie.eat_speed.ticks": " Ticks",
   "cookie.effects": "Effects:",
   "dough.thickness": "Thickness: %s",
   "dough.brilliance": "Brilliance: %s",
@@ -19,8 +20,10 @@
   "block.cookietology.butterator_fan": "Butterator Fan",
   "block.cookietology.broken_butterator_fan": "Broken Butterator Fan",
   "block.cookietology.mixing_bowl": "Mixing Bowl",
+  "block.cookietology.baker": "Baker",
 
   "container.butterator": "Butterator",
+  "container.baker": "Baker",
 
   "subtitles.cookietology.butterator_fan.repair": "Fan Repaired",
 

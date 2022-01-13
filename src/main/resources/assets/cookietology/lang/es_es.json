@@ -10,7 +10,8 @@
 
   "cookie.saturation": "Saturación: %s",
   "cookie.nutrition": "Nutrición: %s",
-  "cookie.eat_speed": "Velocidad de Consumo: %s Ticks",
+  "cookie.eat_speed": "Velocidad de Consumo: %s",
+  "cookie.eat_speed.ticks": " Ticks",
   "cookie.effects": "Efectos:",
   "dough.thickness": "Grosor: %s",
   "dough.brilliance": "Brillo: %s",
@@ -19,8 +20,10 @@
   "block.cookietology.butterator_fan": "Ventilador de Mantecador",
   "block.cookietology.broken_butterator_fan": "Ventilador de Mantecador Roto",
   "block.cookietology.mixing_bowl": "Tazón de Mezcla",
+  "block.cookietology.baker": "Horneador",
 
   "container.butterator": "Mantecador",
+  "container.baker": "Horneador",
 
   "subtitles.cookietology.butterator_fan.repair": "Ventilador Reparado",
 

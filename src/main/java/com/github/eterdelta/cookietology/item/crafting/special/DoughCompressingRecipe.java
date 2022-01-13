@@ -1,4 +1,4 @@
-package com.github.eterdelta.cookietology.item.crafting;
+package com.github.eterdelta.cookietology.item.crafting.special;
 
 import com.github.eterdelta.cookietology.item.DoughItem;
 import com.github.eterdelta.cookietology.registry.CookietologyItems;
@@ -44,7 +44,7 @@ public class DoughCompressingRecipe extends CustomRecipe {
             if (!slotStack.isEmpty()) {
                 if (slotStack.is(CookietologyItems.SOFT_DOUGH.get())) {
                     DoughItem.DoughProperties doughProperties = CookieHelper.getDoughProperties(slotStack);
-                    doughsThickness = Math.min(doughsThickness + doughProperties.thickness(), 1000);
+                    doughsThickness = Math.min(doughsThickness + doughProperties.thickness(), 50);
                     doughsMaxBrilliance = Math.max(doughsMaxBrilliance, doughProperties.brilliance());
                 }
             }

@@ -5,6 +5,7 @@ import com.github.eterdelta.cookietology.util.CookieHelper;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -34,9 +35,10 @@ public class CookieItem extends Item {
     @Override
     public void appendHoverText(ItemStack itemStack, Level level, List<Component> components, TooltipFlag tooltipFlag) {
         CookieProperties cookieProperties = CookieHelper.getCookieProperties(itemStack);
-        components.add(new TranslatableComponent("cookie.eat_speed", String.valueOf(cookieProperties.eatSpeed())).withStyle(Style.EMPTY.withColor(0xFF6100)));
-        components.add(new TranslatableComponent("cookie.saturation", String.valueOf(cookieProperties.saturation())).withStyle(ChatFormatting.GOLD));
-        components.add(new TranslatableComponent("cookie.nutrition", String.valueOf(cookieProperties.nutrition())).withStyle(ChatFormatting.YELLOW));
+        components.add(new TranslatableComponent("cookie.eat_speed", new TextComponent(String.valueOf(cookieProperties.eatSpeed())).withStyle(Style.EMPTY.withColor(0xFF6100))
+                .append(new TranslatableComponent("cookie.eat_speed.ticks"))).withStyle(ChatFormatting.GRAY));
+        components.add(new TranslatableComponent("cookie.saturation", new TextComponent(String.valueOf(cookieProperties.saturation())).withStyle(ChatFormatting.GOLD)).withStyle(ChatFormatting.GRAY));
+        components.add(new TranslatableComponent("cookie.nutrition", new TextComponent(String.valueOf(cookieProperties.nutrition())).withStyle(ChatFormatting.YELLOW)).withStyle(ChatFormatting.GRAY));
     }
 
     public record CookieProperties(int eatSpeed, float saturation, int nutrition) { }

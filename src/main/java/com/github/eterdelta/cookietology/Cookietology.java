@@ -1,5 +1,6 @@
 package com.github.eterdelta.cookietology;
 
+import com.github.eterdelta.cookietology.client.gui.screens.inventory.BakerScreen;
 import com.github.eterdelta.cookietology.client.gui.screens.inventory.ButteratorScreen;
 import com.github.eterdelta.cookietology.client.renderer.blockentity.MixingBowlRenderer;
 import com.github.eterdelta.cookietology.item.CookietologyCreativeTab;
@@ -39,6 +40,7 @@ public class Cookietology {
     private void onClientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
             MenuScreens.register(CookietologyMenus.BUTTERATOR.get(), ButteratorScreen::new);
+            MenuScreens.register(CookietologyMenus.BAKER.get(), BakerScreen::new);
             BlockEntityRenderers.register(CookietologyBlockEntities.MIXING_BOWL.get(), MixingBowlRenderer::new);
         });
     }

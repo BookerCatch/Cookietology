@@ -23,6 +23,7 @@ public class CookietologyItems {
     public static final RegistryObject<Item> COOKIE_MOLD = ITEMS.register("cookie_mold", () -> new MoldItem((new Item.Properties()).tab(Cookietology.CREATIVE_TAB), COOKIE_SHAPED_DOUGH.get()));
 
     public static final RegistryObject<Item> BUTTERATOR = ITEMS.register("butterator", () -> new BlockItem(CookietologyBlocks.BUTTERATOR.get(), new Item.Properties().tab(Cookietology.CREATIVE_TAB)));
+    public static final RegistryObject<Item> BAKER = ITEMS.register("baker", () -> new BlockItem(CookietologyBlocks.BAKER.get(), new Item.Properties().tab(Cookietology.CREATIVE_TAB)));
     public static final RegistryObject<Item> BUTTERATOR_FAN = ITEMS.register("butterator_fan", () -> new BlockItem(CookietologyBlocks.BUTTERATOR_FAN.get(), new Item.Properties().tab(Cookietology.CREATIVE_TAB)));
     public static final RegistryObject<Item> BROKEN_BUTTERATOR_FAN = ITEMS.register("broken_butterator_fan", () -> new BlockItem(CookietologyBlocks.BROKEN_BUTTERATOR_FAN.get(), new Item.Properties().tab(Cookietology.CREATIVE_TAB)));
     public static final RegistryObject<Item> MIXING_BOWL = ITEMS.register("mixing_bowl", () -> new BlockItem(CookietologyBlocks.MIXING_BOWL.get(), new Item.Properties().tab(Cookietology.CREATIVE_TAB)));
