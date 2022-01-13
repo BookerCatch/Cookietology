@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[39,)"
-license="All rights reserved"
+license="MIT"
 [[mods]]
 modId="cookietology"
 version="${file.jarVersion}"
@@ -8,6 +8,7 @@ displayName="Cookietology"
 logoFile="examplemod.png"
 authors="EterDelta"
 description='''
+An expansion mod that makes Minecraft cookies actually useful. Experiment and create the best food.
 '''
 
 [[dependencies.cookietology]]
