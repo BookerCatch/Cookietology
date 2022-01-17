@@ -22,7 +22,7 @@ public class CookietologyRecipes {
     public static final RegistryObject<RecipeSerializer<MixingRecipe>> MIXING_SERIALIZER = RECIPE_SERIALIZERS.register("mixing", MixingRecipe.Serializer::new);
     public static final RegistryObject<RecipeSerializer<DoughCompressingRecipe>> DOUGH_COMPRESSING_SERIALIZER = RECIPE_SERIALIZERS.register("crafting_special_doughcompressing", () -> new SimpleRecipeSerializer<>(DoughCompressingRecipe::new));
     public static final RegistryObject<RecipeSerializer<DoughMoldingRecipe>> DOUGH_MOLDING_SERIALIZER = RECIPE_SERIALIZERS.register("crafting_special_doughmolding", () -> new SimpleRecipeSerializer<>(DoughMoldingRecipe::new));
-    public static final RegistryObject<RecipeSerializer<DoughBrillianceRecipe>> DOUGH_BRILLIANCE_SERIALIZER = RECIPE_SERIALIZERS.register("crafting_special_doughbrilliance", () -> new SimpleRecipeSerializer<>(DoughBrillianceRecipe::new));
+    public static final RegistryObject<RecipeSerializer<DoughBrillianceRecipe>> DOUGH_BRILLIANCE_SERIALIZER = RECIPE_SERIALIZERS.register("mixing_special_doughbrilliance", () -> new SimpleRecipeSerializer<>(DoughBrillianceRecipe::new));
     public static final RegistryObject<RecipeSerializer<CookieBakingRecipe>> COOKIE_BAKING_SERIALIZER = RECIPE_SERIALIZERS.register("baking_special_cookie", () -> new SimpleRecipeSerializer<>(CookieBakingRecipe::new));
 
     public static final RecipeType<IMixingRecipe> MIXING = RecipeType.register(Cookietology.MODID + ":mixing");
