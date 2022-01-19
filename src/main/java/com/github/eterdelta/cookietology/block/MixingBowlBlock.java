@@ -15,11 +15,21 @@ import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
+import java.util.stream.Stream;
+
 public class MixingBowlBlock extends BaseEntityBlock {
-    protected static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D);
+    protected static final VoxelShape SHAPE = Stream.of(
+            Block.box(0, 0, 0, 16, 2, 16),
+            Block.box(0, 0, 0, 2, 14, 16),
+            Block.box(14, 0, 0, 16, 14, 16),
+            Block.box(0, 0, 0, 16, 14, 2),
+            Block.box(0, 0, 14, 16, 14, 16)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
     public MixingBowlBlock(Properties properties) {
         super(properties);
