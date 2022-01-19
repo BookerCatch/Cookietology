@@ -3,6 +3,7 @@ package com.github.eterdelta.cookietology.block.entity;
 import com.github.eterdelta.cookietology.item.crafting.IMixingRecipe;
 import com.github.eterdelta.cookietology.registry.CookietologyBlockEntities;
 import com.github.eterdelta.cookietology.registry.CookietologyRecipes;
+import com.github.eterdelta.cookietology.registry.CookietologySounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.particles.ItemParticleOption;
@@ -12,7 +13,6 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.*;
 import net.minecraft.world.entity.player.Player;
@@ -94,8 +94,7 @@ public class MixingBowlBlockEntity extends BlockEntity implements Clearable {
                         this.clearContent();
                         this.mixAttempts = 0;
                     }
-                    // TODO: Use a custom SoundEvent
-                    this.level.playSound(null, this.getBlockPos(), SoundEvents.SLIME_SQUISH, SoundSource.BLOCKS, 0.6F, 0.6F);
+                    this.level.playSound(null, this.getBlockPos(), CookietologySounds.MIX.get(), SoundSource.BLOCKS, 0.5F, 0.6F + level.getRandom().nextFloat(0.0F, 0.5F));
                     this.spawnMixParticles();
                     this.markUpdated();
                 }

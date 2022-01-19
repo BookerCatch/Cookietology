@@ -12,4 +12,5 @@ public class CookietologySounds {
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, Cookietology.MODID);
 
     public static final RegistryObject<SoundEvent> FAN_REPAIR = SOUNDS.register("block.butterator_fan.repair", () -> new SoundEvent(new ResourceLocation(Cookietology.MODID, "block.butterator_fan.repair")));
+    public static final RegistryObject<SoundEvent> MIX = SOUNDS.register("block.mixing_bowl.mix", () -> new SoundEvent(new ResourceLocation(Cookietology.MODID, "block.mixing_bowl.mix")));
 }
