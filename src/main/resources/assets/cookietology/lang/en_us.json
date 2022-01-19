@@ -29,5 +29,7 @@
   "subtitles.cookietology.butterator_fan.repair": "Fan Repaired",
 
   "machineInfo.missing_fan": "Missing Fan!",
-  "machineInfo.cooldown": "Cooling Down"
+  "machineInfo.cooldown": "Cooling Down",
+
+  "jei.category.butterator.butter_amount": "Butter quantity may vary from 1 to 4"
 }

@@ -29,5 +29,7 @@
   "subtitles.cookietology.butterator_fan.repair": "Ventilador Reparado",
 
   "machineInfo.missing_fan": "¡Falta Ventilador!",
-  "machineInfo.cooldown": "Enfriándose"
+  "machineInfo.cooldown": "Enfriándose",
+
+  "jei.category.butterator.butter_amount": "La cantidad de mantequilla puede variar entre 1 y 4"
 }

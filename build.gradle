@@ -77,11 +77,23 @@ mixin {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    maven {
+        // location of the maven that hosts JEI files
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+    maven {
+        // location of a maven mirror for JEI files, as a fallback
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
 }
 
 dependencies {
 
     minecraft 'net.minecraftforge:forge:1.18.1-39.0.5'
+
+    implementation fg.deobf("mezz.jei:jei-1.18:9.0.0.40")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
 }

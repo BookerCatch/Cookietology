@@ -70,6 +70,11 @@ public class CookieBakingRecipe implements IBakingRecipe {
     }
 
     @Override
+    public boolean isSpecial() {
+        return true;
+    }
+
+    @Override
     public ResourceLocation getId() {
         return this.id;
     }

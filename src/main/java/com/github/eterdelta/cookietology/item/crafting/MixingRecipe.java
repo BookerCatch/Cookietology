@@ -57,6 +57,11 @@ public class MixingRecipe implements IMixingRecipe {
     }
 
     @Override
+    public NonNullList<Ingredient> getIngredients() {
+        return this.ingredients;
+    }
+
+    @Override
     public ItemStack getResultItem() {
         return this.result;
     }

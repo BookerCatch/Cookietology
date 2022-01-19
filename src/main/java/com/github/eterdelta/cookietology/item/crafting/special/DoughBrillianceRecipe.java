@@ -74,7 +74,6 @@ public class DoughBrillianceRecipe implements IMixingRecipe {
         return ItemStack.EMPTY;
     }
 
-
     @Override
     public boolean isSpecial() {
         return true;
