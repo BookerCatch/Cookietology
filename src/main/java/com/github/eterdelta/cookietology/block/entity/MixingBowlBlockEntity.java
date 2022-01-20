@@ -98,8 +98,11 @@ public class MixingBowlBlockEntity extends BlockEntity implements Clearable {
                     this.spawnMixParticles();
                     this.markUpdated();
                 }
-                return InteractionResult.sidedSuccess(this.level.isClientSide());
+            } else {
+                Container container = new SimpleContainer(this.itemStacks.toArray(ItemStack[]::new));
+                Containers.dropContents(level, this.getBlockPos(), container);
             }
+            return InteractionResult.sidedSuccess(this.level.isClientSide());
         }
         return InteractionResult.CONSUME;
     }
