@@ -248,7 +248,14 @@ public class ButteratorBlockEntity extends BaseContainerBlockEntity implements W
 
     @Override
     public boolean canTakeItemThroughFace(int index, ItemStack itemStack, Direction direction) {
-        return direction == Direction.DOWN && index == 1;
+        if (direction == Direction.DOWN) {
+            if (index == 0) {
+                return itemStack.is(Items.BUCKET);
+            } else {
+                return index == 1;
+            }
+        }
+        return false;
     }
 
     @Override
