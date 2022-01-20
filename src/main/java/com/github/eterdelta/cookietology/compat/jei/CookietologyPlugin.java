@@ -63,7 +63,7 @@ public class CookietologyPlugin implements IModPlugin {
     public void registerRecipes(IRecipeRegistration registration) {
         ClientLevel level = Minecraft.getInstance().level;
         if (level != null) {
-            registration.addRecipes(Collections.singleton(new ButteratorExampleRecipe(2000, 2400)), ButteratorRecipeCategory.ID);
+            registration.addRecipes(Collections.singleton(new ButteratorExampleRecipe(2250, 2250)), ButteratorRecipeCategory.ID);
             registration.addRecipes(level.getRecipeManager().getAllRecipesFor(CookietologyRecipes.MIXING), MixingRecipeCategory.ID);
             registration.addRecipes(level.getRecipeManager().getAllRecipesFor(CookietologyRecipes.BAKING), BakingRecipeCategory.ID);
         }

@@ -57,10 +57,10 @@ public class ButteratorScreen extends AbstractContainerScreen<ButteratorMenu> {
         }
         if (!this.menu.hasCooldown()) {
             if (this.menu.hasWorkingFan()) {
-                int progressHeight = (int) (40.0F * ((float) this.menu.getResultProgress() / 3000.0F));
+                int progressHeight = (int) (40.0F * ((float) this.menu.getResultProgress() / 2250.0F));
                 if (progressHeight > 0) {
                     this.blit(poseStack, this.leftPos + 139, this.topPos + 25, 176, 0, 8, progressHeight);
-                    this.drawScreenInfo(poseStack, new TextComponent(TimeUtil.formatTicksToTime(3000 - this.menu.getResultProgress())));
+                    this.drawScreenInfo(poseStack, new TextComponent(TimeUtil.formatTicksToTime(2250 - this.menu.getResultProgress())));
                 } else {
                     this.drawScreenInfo(poseStack, EMPTY_COMPONENT);
                 }

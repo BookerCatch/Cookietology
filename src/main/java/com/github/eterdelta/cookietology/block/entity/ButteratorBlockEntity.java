@@ -104,7 +104,7 @@ public class ButteratorBlockEntity extends BaseContainerBlockEntity implements W
                 if (resultStack.getCount() <= resultStack.getMaxStackSize()) {
                     ++butterator.resultProgress;
 
-                    if (butterator.resultProgress >= 3000) {
+                    if (butterator.resultProgress >= 2250) {
                         ItemStack butterResultStack = new ItemStack(CookietologyItems.SOFT_BUTTER.get(), level.random.nextInt(1, 5));
 
                         if (resultStack.isEmpty()) {
