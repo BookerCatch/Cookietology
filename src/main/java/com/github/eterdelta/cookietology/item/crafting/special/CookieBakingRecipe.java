@@ -86,6 +86,6 @@ public class CookieBakingRecipe implements IBakingRecipe {
 
     @Override
     public int getCookTime() {
-        return 800;
+        return 1200;
     }
 }
