@@ -1,5 +1,6 @@
 package com.github.eterdelta.cookietology.inventory;
 
+import com.github.eterdelta.cookietology.item.crafting.special.CookieBakingRecipe;
 import com.github.eterdelta.cookietology.registry.CookietologyMenus;
 import com.github.eterdelta.cookietology.registry.CookietologyRecipes;
 import net.minecraft.world.Container;
@@ -103,7 +104,7 @@ public class BakerMenu extends AbstractContainerMenu {
     }
 
     public boolean isFuel(ItemStack itemStack) {
-        return net.minecraftforge.common.ForgeHooks.getBurnTime(itemStack, CookietologyRecipes.BAKING) > 0;
+        return net.minecraftforge.common.ForgeHooks.getBurnTime(itemStack, CookieBakingRecipe.TYPE) > 0;
     }
 
     public int getBurnProgress() {

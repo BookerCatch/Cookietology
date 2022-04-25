@@ -1,5 +1,6 @@
 package com.github.eterdelta.cookietology.item.crafting;
 
+import com.github.eterdelta.cookietology.Cookietology;
 import com.github.eterdelta.cookietology.registry.CookietologyRecipes;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -12,6 +13,7 @@ import net.minecraft.world.Container;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.crafting.ShapedRecipe;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.common.util.RecipeMatcher;
@@ -21,6 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MixingRecipe implements IMixingRecipe {
+    public static RecipeType<IMixingRecipe> TYPE = RecipeType.register(Cookietology.MODID + ":mixing");
+    public static final Serializer SERIALIZER = new Serializer();
     protected final NonNullList<Ingredient> ingredients;
     protected final ResourceLocation id;
     protected final ItemStack result;
@@ -73,7 +77,7 @@ public class MixingRecipe implements IMixingRecipe {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return CookietologyRecipes.MIXING_SERIALIZER.get();
+        return MixingRecipe.SERIALIZER;
     }
 
     @Override
@@ -82,6 +86,10 @@ public class MixingRecipe implements IMixingRecipe {
     }
 
     public static class Serializer extends ForgeRegistryEntry<RecipeSerializer<?>> implements RecipeSerializer<MixingRecipe> {
+
+        Serializer() {
+            this.setRegistryName(new ResourceLocation(Cookietology.MODID, "mixing"));
+		}
 
         private static NonNullList<Ingredient> ingredientsFromJson(JsonArray jsonArray) {
             NonNullList<Ingredient> ingredientList = NonNullList.create();

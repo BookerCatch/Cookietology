@@ -1,19 +1,27 @@
 package com.github.eterdelta.cookietology.item.crafting.special;
 
+import com.github.eterdelta.cookietology.Cookietology;
 import com.github.eterdelta.cookietology.item.CookieItem;
 import com.github.eterdelta.cookietology.item.DoughItem;
 import com.github.eterdelta.cookietology.item.crafting.IBakingRecipe;
 import com.github.eterdelta.cookietology.registry.CookietologyItems;
 import com.github.eterdelta.cookietology.registry.CookietologyRecipes;
 import com.github.eterdelta.cookietology.util.CookieHelper;
+import com.google.gson.JsonObject;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.Container;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.registries.ForgeRegistryEntry;
+import org.jetbrains.annotations.Nullable;
 
 public class CookieBakingRecipe implements IBakingRecipe {
+    public static RecipeType<IBakingRecipe> TYPE = RecipeType.register(Cookietology.MODID + ":baking");
+    public static final Serializer SERIALIZER = new Serializer();
     private final ResourceLocation id;
 
     public CookieBakingRecipe(ResourceLocation id) {
@@ -81,11 +89,35 @@ public class CookieBakingRecipe implements IBakingRecipe {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return CookietologyRecipes.COOKIE_BAKING_SERIALIZER.get();
+        return CookieBakingRecipe.SERIALIZER;
     }
 
     @Override
     public int getCookTime() {
         return 1200;
     }
+
+    public static class Serializer extends ForgeRegistryEntry<RecipeSerializer<?>> implements RecipeSerializer<CookieBakingRecipe> {
+
+        Serializer() {
+            this.setRegistryName(new ResourceLocation(Cookietology.MODID, "baking"));
+		}
+
+        @Override
+        public CookieBakingRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
+            return null;
+        }
+
+        @Nullable
+        @Override
+        public CookieBakingRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
+            return null;
+        }
+
+        @Override
+        public void toNetwork(FriendlyByteBuf pBuffer, CookieBakingRecipe pRecipe) {
+
+        }
+    }
+
 }

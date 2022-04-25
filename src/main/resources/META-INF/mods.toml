@@ -8,7 +8,7 @@ displayName="Cookietology"
 logoFile="examplemod.png"
 authors="EterDelta"
 description='''
-An expansion mod that makes Minecraft cookies actually useful. Experiment and create the best food.
+An expansion mod that makes Minecraft cookies actually useful.
 '''
 
 [[dependencies.cookietology]]

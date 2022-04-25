@@ -3,6 +3,7 @@ package com.github.eterdelta.cookietology.block.entity;
 import com.github.eterdelta.cookietology.block.BakerBlock;
 import com.github.eterdelta.cookietology.inventory.BakerMenu;
 import com.github.eterdelta.cookietology.item.crafting.IBakingRecipe;
+import com.github.eterdelta.cookietology.item.crafting.special.CookieBakingRecipe;
 import com.github.eterdelta.cookietology.registry.CookietologyBlockEntities;
 import com.github.eterdelta.cookietology.registry.CookietologyRecipes;
 import net.minecraft.core.BlockPos;
@@ -88,7 +89,7 @@ public class BakerBlockEntity extends BaseContainerBlockEntity implements Worldl
         ItemStack fuelStack = baker.itemStacks.get(2);
 
         if (baker.isLit() || !fuelStack.isEmpty() && !(baker.itemStacks.get(0).isEmpty() && baker.itemStacks.get(1).isEmpty())) {
-            IBakingRecipe recipe = level.getRecipeManager().getRecipeFor(CookietologyRecipes.BAKING, baker, level).orElse(null);
+            IBakingRecipe recipe = level.getRecipeManager().getRecipeFor(CookieBakingRecipe.TYPE, baker, level).orElse(null);
 
             if (!baker.isLit() && baker.canBurn(recipe, baker.itemStacks, baker.getMaxStackSize())) {
                 baker.litTime = baker.getBurnDuration(fuelStack);
@@ -137,7 +138,7 @@ public class BakerBlockEntity extends BaseContainerBlockEntity implements Worldl
     }
 
     private static int getTotalCookTime(Level level, Container container) {
-        return level.getRecipeManager().getRecipeFor(CookietologyRecipes.BAKING, container, level).map(IBakingRecipe::getCookTime).orElse(200);
+        return level.getRecipeManager().getRecipeFor(CookieBakingRecipe.TYPE, container, level).map(IBakingRecipe::getCookTime).orElse(200);
     }
 
     @Override
@@ -300,7 +301,7 @@ public class BakerBlockEntity extends BaseContainerBlockEntity implements Worldl
         if (itemStack.isEmpty()) {
             return 0;
         } else {
-            return ForgeHooks.getBurnTime(itemStack, CookietologyRecipes.BAKING);
+            return ForgeHooks.getBurnTime(itemStack, CookieBakingRecipe.TYPE);
         }
     }
 
@@ -334,7 +335,7 @@ public class BakerBlockEntity extends BaseContainerBlockEntity implements Worldl
             return true;
         } else {
             ItemStack fuelStack = this.itemStacks.get(2);
-            return ForgeHooks.getBurnTime(itemStack, CookietologyRecipes.BAKING) > 0 || itemStack.is(Items.BUCKET) && !fuelStack.is(Items.BUCKET);
+            return ForgeHooks.getBurnTime(itemStack, CookieBakingRecipe.TYPE) > 0 || itemStack.is(Items.BUCKET) && !fuelStack.is(Items.BUCKET);
         }
     }
 }

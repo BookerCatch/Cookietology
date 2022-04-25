@@ -7,6 +7,8 @@ import com.github.eterdelta.cookietology.compat.jei.category.MixingRecipeCategor
 import com.github.eterdelta.cookietology.compat.jei.category.extension.DoughCompressingCraftingExtension;
 import com.github.eterdelta.cookietology.compat.jei.category.extension.DoughMoldingCraftingExtension;
 import com.github.eterdelta.cookietology.compat.jei.recipe.ButteratorExampleRecipe;
+import com.github.eterdelta.cookietology.item.crafting.MixingRecipe;
+import com.github.eterdelta.cookietology.item.crafting.special.CookieBakingRecipe;
 import com.github.eterdelta.cookietology.item.crafting.special.DoughCompressingRecipe;
 import com.github.eterdelta.cookietology.item.crafting.special.DoughMoldingRecipe;
 import com.github.eterdelta.cookietology.registry.CookietologyBlocks;
@@ -64,8 +66,8 @@ public class CookietologyPlugin implements IModPlugin {
         ClientLevel level = Minecraft.getInstance().level;
         if (level != null) {
             registration.addRecipes(Collections.singleton(new ButteratorExampleRecipe(2250, 2250)), ButteratorRecipeCategory.ID);
-            registration.addRecipes(level.getRecipeManager().getAllRecipesFor(CookietologyRecipes.MIXING), MixingRecipeCategory.ID);
-            registration.addRecipes(level.getRecipeManager().getAllRecipesFor(CookietologyRecipes.BAKING), BakingRecipeCategory.ID);
+            registration.addRecipes(level.getRecipeManager().getAllRecipesFor(MixingRecipe.TYPE), MixingRecipeCategory.ID);
+            registration.addRecipes(level.getRecipeManager().getAllRecipesFor(CookieBakingRecipe.TYPE), BakingRecipeCategory.ID);
         }
     }
 }

@@ -13,8 +13,8 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(FoodData.class)
 public class FoodDataMixin {
-
-    @ModifyVariable(at = @At("STORE"), method = "eat(Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/ItemStack;)V")
+/*
+    @ModifyVariable(at = @At( value = "STORE", ordinal = 1), method = "eat")
     private FoodProperties handleFoodProperties(FoodProperties foodProperties, Item item, ItemStack itemStack) {
         if (item == CookietologyItems.COOKIE.get()) {
             CookieItem.CookieProperties cookieProperties = CookieHelper.getCookieProperties(itemStack);
@@ -26,4 +26,5 @@ public class FoodDataMixin {
             return foodProperties;
         }
     }
+*/
 }

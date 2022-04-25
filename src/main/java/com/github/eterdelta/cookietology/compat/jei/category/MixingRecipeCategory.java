@@ -22,6 +22,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -106,7 +107,7 @@ public class MixingRecipeCategory implements IExtendableRecipeCategory<IMixingRe
 
     @Override
     public boolean isHandled(IMixingRecipe recipe) {
-        IRecipeCategoryExtension extension = this.extendableHelper.getRecipeExtensionOrNull(recipe);
+        Optional<IRecipeCategoryExtension> extension = this.extendableHelper.getOptionalRecipeExtension(recipe);
         return extension != null;
     }
 

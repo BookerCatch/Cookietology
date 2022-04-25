@@ -1,6 +1,7 @@
 package com.github.eterdelta.cookietology.block.entity;
 
 import com.github.eterdelta.cookietology.item.crafting.IMixingRecipe;
+import com.github.eterdelta.cookietology.item.crafting.MixingRecipe;
 import com.github.eterdelta.cookietology.registry.CookietologyBlockEntities;
 import com.github.eterdelta.cookietology.registry.CookietologyRecipes;
 import com.github.eterdelta.cookietology.registry.CookietologySounds;
@@ -94,7 +95,7 @@ public class MixingBowlBlockEntity extends BlockEntity implements Clearable {
                         this.clearContent();
                         this.mixAttempts = 0;
                     }
-                    this.level.playSound(null, this.getBlockPos(), CookietologySounds.MIX.get(), SoundSource.BLOCKS, 0.5F, 0.6F + level.getRandom().nextFloat(0.0F, 0.5F));
+                    this.level.playSound(null, this.getBlockPos(), CookietologySounds.MIX.get(), SoundSource.BLOCKS, 0.5F, 0.6F + level.getRandom().nextFloat() * (0.5f));
                     this.spawnMixParticles();
                     this.markUpdated();
                 }
@@ -108,7 +109,7 @@ public class MixingBowlBlockEntity extends BlockEntity implements Clearable {
     }
 
     public Optional<IMixingRecipe> getRecipe() {
-        return this.level.getRecipeManager().getRecipeFor(CookietologyRecipes.MIXING, new SimpleContainer(this.itemStacks.toArray(ItemStack[]::new)), this.level);
+        return this.level.getRecipeManager().getRecipeFor(MixingRecipe.TYPE, new SimpleContainer(this.itemStacks.toArray(ItemStack[]::new)), this.level);
     }
 
     public NonNullList<ItemStack> getItemStacks() {

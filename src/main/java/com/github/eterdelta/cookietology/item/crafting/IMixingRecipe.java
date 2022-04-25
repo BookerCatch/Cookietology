@@ -9,7 +9,7 @@ public interface IMixingRecipe extends Recipe<Container> {
 
     @Override
     default RecipeType<?> getType() {
-        return CookietologyRecipes.MIXING;
+        return MixingRecipe.TYPE;
     }
 
     int getAttempts();

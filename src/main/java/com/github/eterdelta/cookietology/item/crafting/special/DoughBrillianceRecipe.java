@@ -59,7 +59,7 @@ public class DoughBrillianceRecipe implements IMixingRecipe {
         }
 
         ItemStack resultDough = new ItemStack(CookietologyItems.SOFT_DOUGH.get());
-        CookieHelper.saveDoughProperties(resultDough, doughProperties.thickness(), doughProperties.brilliance() < 10 && Math.random() <= 0.25D ? doughProperties.brilliance() + 1 : doughProperties.brilliance());
+        CookieHelper.saveDoughProperties(resultDough, doughProperties.thickness(), doughProperties.brilliance() < 10 && Math.random() <= 0.65D ? doughProperties.brilliance() + 1 : doughProperties.brilliance());
 
         return resultDough;
     }
